@@ -11,23 +11,23 @@ document.addEventListener("DOMContentLoaded", function () {
         const password = document.getElementById("password").value.trim();
 
         let isValid = true;
-        const message = [];
+        const messages = [];
 
         //Username validation
         if (username.length < 3 ) {
             isValid = false;
-            message.push("Username must be at least 3 characters long.")
+            messages.push("Username must be at least 3 characters long.")
         }
         //Email validation
         if(!email.includes("@") || !email.includes(".")) {
             isValid = false;
-            message.push("Email must contain '@' and '.'.");
+            messages.push("Email must contain '@' and '.'.");
         }
 
         //password Validation
         if (password.length > or < 8) {
             isValid  = false;
-            message.push("Password must be at least 8 characters long.");
+            messages.push("Password must be at least 8 characters long.");
         }
         // show feedback
         feedbackDiv.style.display = "block";
